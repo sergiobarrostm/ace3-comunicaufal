@@ -1,0 +1,97 @@
+:root {
+  --color-primary: #446cb3;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  background-color: #f0f0f7;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+header {
+  padding: 0 60px;
+  background-color: var(--color-primary);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+header h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 36px;
+  padding: 20px 0;
+}
+
+header h3 {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 320px;
+}
+
+.container {
+  margin: 0 120px;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-verde {
+  background-color: #28a745;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+tbody > tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+main .table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: center;
+}
+
+main .table tr {
+  border-bottom: 1px solid #c5c5c5;
+  height: 66px;
+}

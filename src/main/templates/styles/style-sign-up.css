@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: Nunito;
+}
+
+#h1pos {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 65.47px;
+  color: #32264d;
+}
+
+#h3pos {
+  position: absolute;
+  width: 163.69px;
+  height: 30px;
+  top: 585px;
+  left: 330px;
+
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: white;
+}
+
+#imgpos1 {
+  display: block;
+  margin: 0 auto;
+  width: 45%;
+}
+
+#imgpos2 {
+  position: absolute;
+  left: 10%;
+  top: 308px;
+}
+
+#imgpos3 {
+  position: absolute;
+  left: 10%;
+  top: 369px;
+}
+
+#imgpos4 {
+  position: absolute;
+  left: 10%;
+  top: 430px;
+}
+
+#imgpos5 {
+  position: absolute;
+  left: 10%;
+  top: 491px;
+}
+
+#imgpos6 {
+  position: absolute;
+  left: 10%;
+  top: 552px;
+}
+
+#imgpos7 {
+  position: absolute;
+  left: 10%;
+  top: 613px;
+}
+
+#inputpos1 {
+  position: absolute;
+  left: 12%;
+  top: 322px;
+  background: transparent;
+  border: transparent;
+}
+
+#inputpos2 {
+  position: absolute;
+  left: 12%;
+  top: 383px;
+  background: transparent;
+  border: transparent;
+}
+
+#inputpos3 {
+  position: absolute;
+  left: 12%;
+  top: 444px;
+  background: transparent;
+  border: transparent;
+}
+
+#inputpos4 {
+  position: absolute;
+  left: 12%;
+  top: 405px;
+  background: transparent;
+  border: transparent;
+}
+
+#inputpos5 {
+  position: absolute;
+  left: 12%;
+  top: 505px;
+  width: 28%;
+  background: transparent;
+  border: transparent;
+}
+
+#inputpos6 {
+  position: absolute;
+  left: 12%;
+  top: 566px;
+  width: 28%;
+  background: transparent;
+  border: transparent;
+}
+
+#retangle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: #446cb3;
+}
+
+#retangle div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#retangle h1 {
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 65.47px;
+  color: white;
+}
+
+#div-branca {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+#form-cadastro {
+  display: flex;
+  width: 75%;
+  padding-top: 75px;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+#form-cadastro input,
+#form-cadastro select {
+  margin-top: 15px;
+  height: 45px;
+  border-radius: 5px;
+  border: lightgrey 1px solid;
+  color: black;
+  padding-left: 15px;
+}
+
+#btn {
+  background-color: #28a745;
+  border: #28a745 1px solid;
+  color: white !important;
+}
+
+.placeholdercolor::placeholder {
+  color: black;
+}

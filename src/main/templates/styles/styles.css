@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  padding: 0 60px;
+  background-color: #446cb3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  padding: 20px 0;
+}
+
+header h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 260px;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #446cb3;
+}
+
+.navbar li {
+  float: right;
+}
+
+#li-left {
+  float: left;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+  background-color: #2a4b79;
+}
+
+.bg-primary-color {
+  background: #446cb3;
+}
+
+.bg-secondary-color {
+  background: #f0f0f7;
+}
+.container-details {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.container-details label {
+  display: block;
+  clear: left;
+  padding-bottom: 10px;
+}
+
+.bold-label {
+  font-weight: bold;
+}
+
+.container-center {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  right: 0;
+  width: 100%;
+  margin-top: 80px;
+}
+
+h1 {
+  color: rgb(255, 255, 255, 1);
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  text-align: center;
+}
+
+#div-output {
+  background-color: rgb(255, 255, 255, 1);
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  border: lightgrey 1px solid;
+}
+
+.btn-text {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  height: 37px;
+  line-height: 37px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+}
+
+.btn-primary {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 167, 69);
+  border-radius: 8px;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  width: 178px;
+  height: 48px;
+  line-height: 48px;
+}
+
+#form-sign input {
+  height: 48px;
+  width: 287px;
+  border-radius: 8px;
+  border: lightgrey 1px solid;
+  padding-left: 15px;
+  margin-right: 20px;
+}
+
+.btn-verde {
+  background-color: #28a745;
+  border: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  display: block;
+  margin: 0 auto;
+  font-size: 16px;
+  width: 165px;
+}
