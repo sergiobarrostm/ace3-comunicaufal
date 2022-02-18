@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,19 +14,17 @@
 <body class="bg-primary-color">
     <main class="container-center">
         <h1 class="title">COMUNICA <strong>UFAL</strong></h1>
-        <form action="" id="form-sign">
-            <input class="placeholdercolor" id="input1" type="text" placeholder="Matrícula">
+        <form th:action="@{/dashboard}" id="form-sign">
+            <input class="placeholdercolor" name="id"  type="text" placeholder="Matrícula">
             <button type="submit" class="btn-primary">Entrar</button>
         </form>
-        <a href="#" class="btn-text">
+        <a th:href="@{/signup}" class="btn-text">
             Ainda não possui cadastro? Cadastre-se aqui!
         </a>
         <img id="img-logo" src="../assets/logo.svg"/>
         </div>
         
         </form>
-    </div>
-    
-    
+    </div>    
 </body>
 </html>

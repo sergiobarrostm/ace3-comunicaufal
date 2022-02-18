@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +16,7 @@
         <h1 class="title" >
             Cadastro feito com sucesso!
         </h1>
-        <a href="#" class="btn-primary" style="text-decoration:none">Fazer login</a>
+        <a th:href="@{/}" class="btn-primary" style="text-decoration:none">Fazer login</a>
     </main>
 </body>
 </html>
