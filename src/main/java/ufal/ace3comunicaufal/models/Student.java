@@ -1,21 +1,28 @@
 package ufal.ace3comunicaufal.models;
 
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+@Entity
 public class Student {
 
-    private int id, quarter;
+	@Id
+    private int matricula;
+	
+    private int quarter;
     private String name, surname, email, course;
+    
+    @OneToMany
+    private List<Request> requests;
+    
+    public Student() { }
 
-    public Student(int id, int quarter, String name, String surname, String email, String course) {
-        this.id = id;
-        this.quarter = quarter;
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-        this.course = course;
-    }
 
-    public int getID() {
-        return id;
+    public int getMatricula() {
+        return matricula;
     }
 
     public int getQuarter() {
@@ -38,8 +45,8 @@ public class Student {
         return course;
     }
 
-    public void setID (int id ) {
-        this.id = id;
+    public void setMatricula (int matricula ) {
+        this.matricula = matricula;
     }
 
     public void setQuarter(int quarter) {
@@ -61,5 +68,13 @@ public class Student {
     public void setCourse(String course) {
         this.course = course;
     }
+
+	public List<Request> getRequests() {
+		return requests;
+	}
+
+	public void setRequests(List<Request> requests) {
+		this.requests = requests;
+	} 
 
 }
