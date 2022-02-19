@@ -23,6 +23,7 @@ public class Request {
 	
 	private Date requestDate;
 
+
 	public Request() {}
 	
 	public Integer getId() {
@@ -66,5 +67,7 @@ public class Request {
 	public void setRequestDate(Date requestDate) {
 		this.requestDate = requestDate;
 	}
+
+	
 	
 }

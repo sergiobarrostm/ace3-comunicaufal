@@ -39,11 +39,17 @@ public class RequestController {
 		Student student = studentRepository.findById(id).get();
 		Date requestNow = new Date();
         request.setStudent(student);
-        request.setRequestDate(requestNow);
+        request.setRequestDate(requestNow);  
 		requestRepository.save(request);
         model.addAttribute("id", id);
         return "success-request-student";
 	}
 	
+	@GetMapping("request/details")
+	public String requestDetails(Integer id, Model model) {
+		Request request = requestRepository.findById(id).get();
+		model.addAttribute(request);
+		return "request-details";
+	}
 	
 }
