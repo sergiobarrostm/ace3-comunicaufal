@@ -29,4 +29,5 @@ Essas instruções vão ensinar a baixar uma cópia do projeto funcionando na su
 - [Gabriel Pereira](https://github.com/GPereira2609)
 - [Gerson Jatobá](https://github.com/GersonMJL)
 - [Lívia Cavalcante](https://github.com/LiviaCavalcante)
+- [Rafaella Nunes](https://github.com/rafaella-nunes)
 - [Sérgio Barros](https://github.com/sergiobarrostm)
