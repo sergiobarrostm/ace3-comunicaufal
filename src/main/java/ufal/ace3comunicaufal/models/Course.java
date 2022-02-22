@@ -1,9 +1,9 @@
 package ufal.ace3comunicaufal.models;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Course {
@@ -12,15 +12,14 @@ public class Course {
 	@GeneratedValue
 	private Integer id;
 
-	@OneToOne
-	private Student student;
-
-    @OneToOne
-	private Staff staff;
-
+	@Column
 	private String name;
 
 	public Course() {}
+
+	public Course(String name) {
+		this.name = name;
+	}
 
 	public Integer getId() {
 		return id;
@@ -28,15 +27,6 @@ public class Course {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
-	public Student getStudent() {
-		return student;
-	}
-
-	public void setStudent(Student student) {
-		this.student = student;
-	}
-
 	public String getName() {
 		return name;
 	}

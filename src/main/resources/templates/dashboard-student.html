@@ -52,7 +52,7 @@
           <tr th:each="request : ${requests}" class="bg-transparent">
             <td th:text="${request.id}"></td>
             <td th:text="${request.title}"></td>
-            <td th:text="${request.tag}"></td>
+            <td th:text="${request.tag.name}"></td>
             <td th:text="${request.requestDate}"></td>
             <td><a class="btn-verde" th:href="@{/request/details(id=${request.id})}">Acompanhar</a></td>
           </tr>
