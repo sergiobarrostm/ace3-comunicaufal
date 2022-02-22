@@ -20,21 +20,9 @@
             <form id="form-cadastro" th:object="${student}" method="post" th:action="@{/create}">
                 <input class="placeholdercolor" type="text" placeholder="Nome" th:field="*{name}">
                 <input class="placeholdercolor" type="text" placeholder="Sobrenome" th:field="*{surname}">
-                <input class="placeholdercolor" type="number"  th:field="*{matricula}" th:placeholder="Matrícula">
-                <select required name="Período" th:field="*{quarter}" placeholder="asas">
-                    <option value="1">1ª período</option>
-                    <option value="2">2ª período</option>
-                    <option value="3">3ª período</option>
-                    <option value="4">4ª período</option>
-                    <option value="5">5ª período</option>
-                    <option value="6">6ª período</option>
-                    <option value="7">7ª período</option>
-                    <option value="8">8ª período</option>
-                    <option value="9">9ª período</option>
-                    <option value="10">10ª período</option>
-                </select>
-                <select name="Curso" th:field="*{course}">
-                    <option class="placeholdercolor" value="Ciência da Computação">Ciência da computação</option>
+                <input class="placeholdercolor" type="text" placeholder="Matrícula" th:field="*{matricula}" >
+                <select id="courses" name="courses" th:field="*{course}">
+                    <option th:each="course : ${courses}" class="placeholdercolor" th:value="${course.id}" th:text="${course.name}"></option>
                 </select>
                 <input type="submit" id="btn" placeholder="Entrar">
             </form>
