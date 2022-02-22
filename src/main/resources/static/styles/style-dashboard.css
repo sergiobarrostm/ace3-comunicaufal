@@ -17,7 +17,6 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: center;
   background-color: #f0f0f7;
 }
 
@@ -35,7 +34,6 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  position: absolute;
   width: 100%;
 }
 
@@ -61,7 +59,7 @@ header div {
 }
 
 .container {
-  margin: 0 120px;
+  margin: 30px 120px 0 120px;
 }
 
 .d-flex {
