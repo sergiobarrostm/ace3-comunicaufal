@@ -13,16 +13,17 @@ public class Request {
 	@Id
 	@GeneratedValue
 	private Integer id;
+
+	private String title;
+	private String description;
+	private Date requestDate;
 	
 	@ManyToOne
 	private Student student;
-	
-	private String title;
-	private String tag;
-	private String description;
-	
-	private Date requestDate;
-
+	@ManyToOne
+	private Tag tag;
+	@ManyToOne
+	private Course course;
 
 	public Request() {}
 	
@@ -47,10 +48,10 @@ public class Request {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	public String getTag() {
+	public Tag getTag() {
 		return tag;
 	}
-	public void setTag(String tag) {
+	public void setTag(Tag tag) {
 		this.tag = tag;
 	}
 	public String getDescription() {
@@ -67,7 +68,11 @@ public class Request {
 	public void setRequestDate(Date requestDate) {
 		this.requestDate = requestDate;
 	}
-
-	
+	public Course getCourse() {
+		return course;
+	}
+	public void setCourse(Course course) {
+		this.course = course;
+	}
 	
 }

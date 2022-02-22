@@ -4,7 +4,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import ufal.ace3comunicaufal.CourseRepository;
 import ufal.ace3comunicaufal.StudentRepository;
+import ufal.ace3comunicaufal.models.Course;
 import ufal.ace3comunicaufal.models.Student;
 
 import org.springframework.stereotype.Controller;
@@ -14,9 +16,11 @@ import org.springframework.ui.Model;
 public class StudentController {
 	
 	private StudentRepository studentRepository;	
+	private CourseRepository courseRepository;
 
-	public StudentController(StudentRepository studentRepository) {
+	public StudentController(StudentRepository studentRepository, CourseRepository courseRepository) {
 		this.studentRepository = studentRepository;
+		this.courseRepository = courseRepository;
 	}
 
 	@GetMapping("/")
@@ -27,6 +31,8 @@ public class StudentController {
 	@GetMapping("/signup")
 	public String signUpScreen(Model model) {
 		Student student = new Student();
+		Iterable<Course> courses = courseRepository.findAll();
+		model.addAttribute("courses" , courses);
         model.addAttribute("student" , student);
 		return "sign-up";
 	}

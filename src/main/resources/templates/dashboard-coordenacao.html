@@ -31,9 +31,7 @@
     <div class="container">
       <div class="d-flex">
         <h1>Olá Raquel,<br>essas são suas solicitações</h1>
-        <span>
-          <button class="btn-verde">Nova solicitação</button>
-        </span>
+
       </div>
       <table class="table">
         <thead>
@@ -42,34 +40,16 @@
             <th>Título</th>
             <th>Tag</th>
             <th>Data</th>
-            <th>Status</th>
             <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr class="bg-transparent">
-            <td>1</td>
-            <td>Seleção projeto</td>
-            <td>Projetos</td>
-            <td>28/10/2021</td>
-            <td>Respondido</td>
-            <td><button class="btn-verde">Acompanhar</button></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>Destrancamento de matrícula</td>
-            <td>Matrícula</td>
-            <td>15/10/2021</td>
-            <td>Em Andamento</td>
-            <td><button class="btn-verde">Acompanhar</button></td>
-          </tr>
-          <tr class="bg-transparent">
-            <td>3</td>
-            <td>Trancamento de matrícula</td>
-            <td>Matrícula</td>
-            <td>06/06/2021</td>
-            <td>Em Andamento</td>
-            <td><button class="btn-verde">Acompanhar</button></td>
+          <tr th:each="request : ${requests}" class="bg-transparent">
+            <td th:text="${request.id}"></td>
+            <td th:text="${request.title}"></td>
+            <td th:text="${request.tag.name}"></td>
+            <td th:text="${request.requestDate}"></td>
+            <td><a class="btn-verde" th:href="@{/request/details(id=${request.id})}">Acompanhar</a></td>
           </tr>
         </tbody>
     </div>
