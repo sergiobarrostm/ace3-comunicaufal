@@ -6,7 +6,11 @@ import javax.persistence.Id;
 
 @Entity
 public class Tag {
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> 01623e1 (news features implematations)
     @Id
     @GeneratedValue
     private Integer id;
