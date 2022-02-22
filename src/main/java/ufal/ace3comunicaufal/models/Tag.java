@@ -6,7 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class Tag {
-    
+
     @Id
     @GeneratedValue
     private Integer id;

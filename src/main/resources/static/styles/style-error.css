@@ -1,0 +1,38 @@
+body{
+    background: rgb(68,108,179);
+    font-family: 'Nunito', sans-serif;
+}
+
+#img-erro {
+    width: 538px;
+    height: 355px;
+    margin-right: auto;
+    margin-top: 55px;
+    margin-left: auto;
+    display: block;
+}
+
+#titulo {
+    color: rgb(255, 255, 255);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    height: 60px;
+    margin-top: 5px;
+    text-align: center;
+    
+    
+}
+
+#botao {
+    color: rgb(255, 255, 255);
+    background-color: rgb(40, 167, 69);
+    border-radius: 8px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 280px;
+    height: 46px;
+    display: block;
+    text-align:center;
+    line-height: 46px;
+}
