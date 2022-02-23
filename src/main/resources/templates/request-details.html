@@ -20,7 +20,6 @@
     </nav>
     <main class="container-details">
         <h2>Acompanhamento da solicitação</h2>
-        <label class="bold-label">Status: Respondido</label>
         <label class="bold-label">Título:</label>
 		<label th:text="${request.title}"></label>        
 		<label class="bold-label">Descrição:</label>
@@ -28,13 +27,7 @@
         <label class="bold-label">Data:</label>
 		<label th:text="${request.requestDate}"></label>       
         <label class="bold-label">Tag:</label>
-		<label th:text="${request.tag}"></label>       
-        <label class="bold-label">Resposta:</label>
-
-        <div id="div-output">
-            <output>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sodales scelerisque augue condimentum luctus. Aliquam bibendum nisl in aliquet ullamcorper. Duis id velit sed arcu lobortis dictum non in urna.
-            </output>
-        </div>
+		<label th:text="${request.tag.name}"></label>       
 
     </main>
 

@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
 @Entity
 public class Request {
@@ -22,6 +23,7 @@ public class Request {
 	private Student student;
 	@ManyToOne
 	private Tag tag;
+
 	@ManyToOne
 	private Course course;
 

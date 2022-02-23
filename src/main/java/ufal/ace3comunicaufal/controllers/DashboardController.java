@@ -9,6 +9,7 @@ import ufal.ace3comunicaufal.StaffRepository;
 import ufal.ace3comunicaufal.StudentRepository;
 import ufal.ace3comunicaufal.models.Course;
 import ufal.ace3comunicaufal.models.Request;
+import ufal.ace3comunicaufal.models.Staff;
 import ufal.ace3comunicaufal.models.Student;
 
 @Controller
@@ -26,7 +27,7 @@ public class DashboardController {
 
 
 	@GetMapping("/dashboard")
-	public String dashboardScreen(Integer id, Model model) {
+	public String dashboardScreen(Integer id, String password, Model model) {
 
 		if(studentRepository.findById(id).isPresent()){
 			Student student =studentRepository.findById(id).get() ;
@@ -37,8 +38,10 @@ public class DashboardController {
 		}
 
 		if(staffRepository.findById(id).isPresent()){
+			Staff staff = staffRepository.findById(id).get() ;
 			Course course = staffRepository.findById(id).get().getCourse();
 			Iterable<Request> requests = requestRepository.findByCourse(course);
+			model.addAttribute("staff" , staff);
 			model.addAttribute("requests" , requests);
 			return "dashboard-coordenacao";
 		}

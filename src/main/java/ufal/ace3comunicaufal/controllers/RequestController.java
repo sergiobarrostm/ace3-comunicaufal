@@ -30,26 +30,26 @@ public class RequestController {
 	}
 
 	@GetMapping("/request")
-	public String signUpScreen(Integer id, Model model) {
+	public String signUpScreen(Integer id, String password, Model model) {
 		Request request = new Request();
 		Integer matricula = id;
-
 		Iterable<Tag> tags = tagRepository.findAll();
 		model.addAttribute("tags" ,tags);
-
         model.addAttribute("request" , request);
         model.addAttribute("matricula" , matricula);
+		model.addAttribute("password" , password);
 		return "new-solicitation";
 	}
 	
 	@PostMapping("/request/create")
-	public String create(Integer id, @ModelAttribute Request request, Model model) {
+	public String create(Integer id, String password, @ModelAttribute Request request, Model model) {
 		Student student = studentRepository.findById(id).get();
 		Date requestNow = new Date();
 		request.setCourse(student.getCourse());
         request.setStudent(student);
         request.setRequestDate(requestNow);  
 		requestRepository.save(request);
+		model.addAttribute("password" , password);
         model.addAttribute("id", id);
         return "success-request-student";
 	}

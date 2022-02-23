@@ -18,10 +18,12 @@
         <h1 id="h1pos">Cadastre-se para<br>fazer solicitações</h1>
         <div style="width: 100%;">
             <form id="form-cadastro" th:object="${student}" method="post" th:action="@{/create}">
-                <input class="placeholdercolor" type="text" placeholder="Nome" th:field="*{name}">
-                <input class="placeholdercolor" type="text" placeholder="Sobrenome" th:field="*{surname}">
-                <input class="placeholdercolor" type="text" placeholder="Matrícula" th:field="*{matricula}" >
-                <select id="courses" name="courses" th:field="*{course}">
+                <input required class="placeholdercolor" type="text" placeholder="Nome" th:field="*{name}">
+                <input required class="placeholdercolor" type="text" placeholder="Sobrenome" th:field="*{surname}">
+                <input required class="placeholdercolor" type="text" placeholder="Matrícula" th:field="*{matricula}" >
+                <input required class="placeholdercolor" type="email" placeholder="E-mail" th:field="*{email}" >
+                <input required class="placeholdercolor" type="password" placeholder="Senha" th:field="*{password}" >
+                <select required id="courses" name="courses" th:field="*{course}">
                     <option th:each="course : ${courses}" class="placeholdercolor" th:value="${course.id}" th:text="${course.name}"></option>
                 </select>
                 <input type="submit" id="btn" placeholder="Entrar">
